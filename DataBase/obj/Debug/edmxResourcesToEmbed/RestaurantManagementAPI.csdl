@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ResturantManagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblkitchen">
+    <Key>
+      <PropertyRef Name="kitchenID" />
+    </Key>
+    <Property Name="kitchenID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblProducts" Relationship="Self.FK_Kitchen_Item" FromRole="tblkitchen" ToRole="tblProduct" />
+  </EntityType>
+  <EntityType Name="tblOrder">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Qty" Type="Int32" Nullable="false" />
+    <Property Name="TotalPrice" Type="Double" Nullable="false" />
+    <Property Name="Tax" Type="Double" Nullable="false" />
+    <Property Name="discount" Type="Double" Nullable="false" />
+    <NavigationProperty Name="tblOrderItems" Relationship="Self.FK_OrderItem_Order" FromRole="tblOrder" ToRole="tblOrderItem" />
+  </EntityType>
+  <EntityType Name="tblOrderItem">
+    <Key>
+      <PropertyRef Name="OrderItemID" />
+    </Key>
+    <Property Name="OrderItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="qty" Type="Int32" Nullable="false" />
+    <Property Name="OrderID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblOrder" Relationship="Self.FK_OrderItem_Order" FromRole="tblOrderItem" ToRole="tblOrder" />
+    <NavigationProperty Name="tblProduct" Relationship="Self.FK_OrderItem_tblItem" FromRole="tblOrderItem" ToRole="tblProduct" />
+  </EntityType>
+  <EntityType Name="tblProduct">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="KitchenID" Type="Int32" Nullable="false" />
+    <Property Name="price" Type="Double" Nullable="false" />
+    <NavigationProperty Name="tblkitchen" Relationship="Self.FK_Kitchen_Item" FromRole="tblProduct" ToRole="tblkitchen" />
+    <NavigationProperty Name="tblOrderItems" Relationship="Self.FK_OrderItem_tblItem" FromRole="tblProduct" ToRole="tblOrderItem" />
+  </EntityType>
+  <EntityType Name="tblUser">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_Kitchen_Item">
+    <End Role="tblkitchen" Type="Self.tblkitchen" Multiplicity="1" />
+    <End Role="tblProduct" Type="Self.tblProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblkitchen">
+        <PropertyRef Name="kitchenID" />
+      </Principal>
+      <Dependent Role="tblProduct">
+        <PropertyRef Name="KitchenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderItem_Order">
+    <End Role="tblOrder" Type="Self.tblOrder" Multiplicity="1" />
+    <End Role="tblOrderItem" Type="Self.tblOrderItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblOrder">
+        <PropertyRef Name="OrderID" />
+      </Principal>
+      <Dependent Role="tblOrderItem">
+        <PropertyRef Name="OrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderItem_tblItem">
+    <End Role="tblProduct" Type="Self.tblProduct" Multiplicity="1" />
+    <End Role="tblOrderItem" Type="Self.tblOrderItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblProduct">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="tblOrderItem">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ResturantManagementEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblkitchens" EntityType="Self.tblkitchen" />
+    <EntitySet Name="tblOrders" EntityType="Self.tblOrder" />
+    <EntitySet Name="tblOrderItems" EntityType="Self.tblOrderItem" />
+    <EntitySet Name="tblProducts" EntityType="Self.tblProduct" />
+    <EntitySet Name="tblUsers" EntityType="Self.tblUser" />
+    <AssociationSet Name="FK_Kitchen_Item" Association="Self.FK_Kitchen_Item">
+      <End Role="tblkitchen" EntitySet="tblkitchens" />
+      <End Role="tblProduct" EntitySet="tblProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderItem_Order" Association="Self.FK_OrderItem_Order">
+      <End Role="tblOrder" EntitySet="tblOrders" />
+      <End Role="tblOrderItem" EntitySet="tblOrderItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderItem_tblItem" Association="Self.FK_OrderItem_tblItem">
+      <End Role="tblProduct" EntitySet="tblProducts" />
+      <End Role="tblOrderItem" EntitySet="tblOrderItems" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

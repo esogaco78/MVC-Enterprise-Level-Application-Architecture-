@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\BusinessServices",
+    "\\BusinessServices\\Implementation",
+    "\\BusinessServices\\Interfaces",
+    "\\RestaurantManagementSystemAPI",
+    "\\RestaurantManagementSystemAPI\\Controllers"
+  ],
+  "SelectedNode": "\\BusinessServices\\Implementation\\UserServices.cs",
+  "PreviewInSolutionExplorer": false
+}

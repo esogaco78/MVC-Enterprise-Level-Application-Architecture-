@@ -1,0 +1,11 @@
+D:\ASP.NET\ASP.NET MVC PROJECTS\RestaurantManagementSystemAPI\BusinessEntities\bin\Debug\BusinessEntities.dll
+D:\ASP.NET\ASP.NET MVC PROJECTS\RestaurantManagementSystemAPI\BusinessEntities\bin\Debug\BusinessEntities.pdb
+D:\ASP.NET\ASP.NET MVC PROJECTS\RestaurantManagementSystemAPI\BusinessEntities\obj\Debug\BusinessEntities.csproj.CoreCompileInputs.cache
+D:\ASP.NET\ASP.NET MVC PROJECTS\RestaurantManagementSystemAPI\BusinessEntities\obj\Debug\BusinessEntities.dll
+D:\ASP.NET\ASP.NET MVC PROJECTS\RestaurantManagementSystemAPI\BusinessEntities\obj\Debug\BusinessEntities.pdb
+D:\ASP.NET\ASP.NET MVC PROJECTS\RestaurantManagementAPI\BusinessEntities\bin\Debug\BusinessEntities.dll
+D:\ASP.NET\ASP.NET MVC PROJECTS\RestaurantManagementAPI\BusinessEntities\bin\Debug\BusinessEntities.pdb
+D:\ASP.NET\ASP.NET MVC PROJECTS\RestaurantManagementAPI\BusinessEntities\obj\Debug\BusinessEntities.csprojAssemblyReference.cache
+D:\ASP.NET\ASP.NET MVC PROJECTS\RestaurantManagementAPI\BusinessEntities\obj\Debug\BusinessEntities.csproj.CoreCompileInputs.cache
+D:\ASP.NET\ASP.NET MVC PROJECTS\RestaurantManagementAPI\BusinessEntities\obj\Debug\BusinessEntities.dll
+D:\ASP.NET\ASP.NET MVC PROJECTS\RestaurantManagementAPI\BusinessEntities\obj\Debug\BusinessEntities.pdb

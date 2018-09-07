@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantManagementSystemAPI", "RestaurantManagementSystemAPI\RestaurantManagementSystemAPI.csproj", "{98E858BB-DFA9-4529-A640-7D74907F8237}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business Logic Layer", "Business Logic Layer", "{593FE132-AD17-4F09-903F-FEFC8FD312F8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data Access Layer", "Data Access Layer", "{DC2B9B2F-8A56-40DB-BA3E-8BAD3CE5AB28}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{274498CA-F8B0-4B90-9C50-41D3EFE16BCA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{A79437A3-749A-4AE0-9BBC-403057260D82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBase", "DataBase\DataBase.csproj", "{93944EB6-4728-4584-830A-66811847E587}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessEntities", "BusinessEntities\BusinessEntities.csproj", "{07D1D4F5-0806-49AA-B891-CEAE99A58E96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessServices", "BusinessServices\BusinessServices.csproj", "{3AC47F11-004A-4307-B21F-485050EC20F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Utilities\Utilities.csproj", "{7E1E0BEA-97C8-456C-83B9-1418D22DE8C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resolver", "..\..\PREVIOUS ASP.NET PROJECTS\REPOSITORY\REPOSITORY\Resolver\Resolver.csproj", "{0578A407-827F-4236-83CA-3D8F06799AF3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98E858BB-DFA9-4529-A640-7D74907F8237}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98E858BB-DFA9-4529-A640-7D74907F8237}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98E858BB-DFA9-4529-A640-7D74907F8237}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98E858BB-DFA9-4529-A640-7D74907F8237}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93944EB6-4728-4584-830A-66811847E587}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93944EB6-4728-4584-830A-66811847E587}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93944EB6-4728-4584-830A-66811847E587}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93944EB6-4728-4584-830A-66811847E587}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07D1D4F5-0806-49AA-B891-CEAE99A58E96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07D1D4F5-0806-49AA-B891-CEAE99A58E96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07D1D4F5-0806-49AA-B891-CEAE99A58E96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07D1D4F5-0806-49AA-B891-CEAE99A58E96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AC47F11-004A-4307-B21F-485050EC20F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AC47F11-004A-4307-B21F-485050EC20F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AC47F11-004A-4307-B21F-485050EC20F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AC47F11-004A-4307-B21F-485050EC20F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E1E0BEA-97C8-456C-83B9-1418D22DE8C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E1E0BEA-97C8-456C-83B9-1418D22DE8C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E1E0BEA-97C8-456C-83B9-1418D22DE8C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E1E0BEA-97C8-456C-83B9-1418D22DE8C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0578A407-827F-4236-83CA-3D8F06799AF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0578A407-827F-4236-83CA-3D8F06799AF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0578A407-827F-4236-83CA-3D8F06799AF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0578A407-827F-4236-83CA-3D8F06799AF3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{98E858BB-DFA9-4529-A640-7D74907F8237} = {A79437A3-749A-4AE0-9BBC-403057260D82}
+		{93944EB6-4728-4584-830A-66811847E587} = {DC2B9B2F-8A56-40DB-BA3E-8BAD3CE5AB28}
+		{07D1D4F5-0806-49AA-B891-CEAE99A58E96} = {593FE132-AD17-4F09-903F-FEFC8FD312F8}
+		{3AC47F11-004A-4307-B21F-485050EC20F9} = {593FE132-AD17-4F09-903F-FEFC8FD312F8}
+		{7E1E0BEA-97C8-456C-83B9-1418D22DE8C7} = {274498CA-F8B0-4B90-9C50-41D3EFE16BCA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35
+		SolutionGuid = {12480E7C-0DBF-4E88-891A-C11E8C832F03}
+	EndGlobalSection
+EndGlobal
